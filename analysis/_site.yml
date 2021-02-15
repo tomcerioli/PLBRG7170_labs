@@ -1,12 +1,14 @@
 name: PLBRG 7170
 output_dir: ../docs
 navbar:
-  title: labs_worflowr
+  title: PLBRG 7170 Labs
   left:
-  - text: Home
+  - text: Index
     href: index.html
   - text: About
     href: about.html
+  - text: Lab1
+    href: lab1.html
   - text: License
     href: license.html
   right:
