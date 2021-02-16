@@ -7,9 +7,16 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Introduction
+## Lab1 
 
+Assignment: write a code to calculate the variance using vector multiplication.
 ```{r}
-vector <- c(1:10)
+set.seed(2993)
+#1000 samples from normal distribution with mean 15, and std=10
+s <- rnorm(1000,15,10)
+#get sum of squares
+b <- rep(1,1000) #create vector with 1000 elements (1) 
+sumS <- t(s)%*%b #calculate sum of squares
+  
 ```
 

@@ -8,4 +8,4 @@ editor_options:
   chunk_output_type: console
 ---
 
-Click on this [link](lab1.html) to see lab 1. 
+1. Click on this [link](lab1.html) to see lab 1. 
