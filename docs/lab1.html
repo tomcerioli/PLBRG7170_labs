@@ -355,15 +355,18 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">labs_worflowr</a>
+      <a class="navbar-brand" href="index.html">PLBRG 7170 Labs</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
+  <a href="index.html">Index</a>
 </li>
 <li>
   <a href="about.html">About</a>
+</li>
+<li>
+  <a href="lab1.html">Lab1</a>
 </li>
 <li>
   <a href="license.html">License</a>
@@ -504,22 +507,26 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomtomcerioliPLBRG7170labstree1e5493512fc8d4226f6df4240494a6afe139bff3targetblank1e54935a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/tomcerioli/PLBRG7170_labs/tree/1e5493512fc8d4226f6df4240494a6afe139bff3" target="_blank">1e54935</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomtomcerioliPLBRG7170labstreea51fc234315fa3e0d2430959a02268db28af4c72targetblanka51fc23a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/tomcerioli/PLBRG7170_labs/tree/a51fc234315fa3e0d2430959a02268db28af4c72" target="_blank">a51fc23</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomtomcerioliPLBRG7170labstree1e5493512fc8d4226f6df4240494a6afe139bff3targetblank1e54935a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomtomcerioliPLBRG7170labstreea51fc234315fa3e0d2430959a02268db28af4c72targetblanka51fc23a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/tomcerioli/PLBRG7170_labs/tree/1e5493512fc8d4226f6df4240494a6afe139bff3" target="_blank">1e54935</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/tomcerioli/PLBRG7170_labs/tree/a51fc234315fa3e0d2430959a02268db28af4c72" target="_blank">a51fc23</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-working directory clean
+Ignored files:
+    Ignored:    .RData
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -557,6 +564,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/tomcerioli/PLBRG7170_labs/blob/a51fc234315fa3e0d2430959a02268db28af4c72/analysis/lab1.Rmd" target="_blank">a51fc23</a>
+</td>
+<td>
+tomcerioli
+</td>
+<td>
+2021-02-15
+</td>
+<td>
+added lab 2 and fixed index
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/tomcerioli/PLBRG7170_labs/fd25f1124150e807baff7faa0cebb4361db288c8/docs/lab1.html" target="_blank">fd25f11</a>
+</td>
+<td>
+tomcerioli
+</td>
+<td>
+2021-02-15
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -615,9 +656,15 @@ Add lab1
 </div>
 </div>
 </div>
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
-<pre class="r"><code>vector &lt;- c(1:10)</code></pre>
+<div id="lab1" class="section level2">
+<h2>Lab1</h2>
+<p>Assignment: write a code to calculate the variance using vector multiplication.</p>
+<pre class="r"><code>set.seed(2993)
+#1000 samples from normal distribution with mean 15, and std=10
+s &lt;- rnorm(1000,15,10)
+#get sum of squares
+b &lt;- rep(1,1000) #create vector with 1000 elements (1) 
+sumS &lt;- t(s)%*%b #calculate sum of squares</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -646,14 +693,14 @@ other attached packages:
 [1] workflowr_1.6.2
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.5       rstudioapi_0.11  whisker_0.4      knitr_1.30      
- [5] magrittr_1.5     R6_2.4.1         rlang_0.4.7      stringr_1.4.0   
- [9] tools_4.0.2      xfun_0.15        git2r_0.27.1     htmltools_0.5.0 
-[13] ellipsis_0.3.1   rprojroot_1.3-2  yaml_2.2.1       digest_0.6.25   
-[17] tibble_3.0.3     lifecycle_0.2.0  crayon_1.3.4     later_1.1.0.1   
-[21] vctrs_0.3.4      promises_1.1.1   fs_1.5.0         glue_1.4.2      
-[25] evaluate_0.14    rmarkdown_2.3    stringi_1.5.3    compiler_4.0.2  
-[29] pillar_1.4.6     backports_1.1.10 httpuv_1.5.4     pkgconfig_2.0.3 </code></pre>
+ [1] Rcpp_1.0.5      rstudioapi_0.11 whisker_0.4     knitr_1.30     
+ [5] magrittr_1.5    R6_2.4.1        rlang_0.4.7     stringr_1.4.0  
+ [9] tools_4.0.2     xfun_0.15       git2r_0.27.1    htmltools_0.5.0
+[13] ellipsis_0.3.1  rprojroot_2.0.2 yaml_2.2.1      digest_0.6.25  
+[17] tibble_3.0.3    lifecycle_0.2.0 crayon_1.3.4    later_1.1.0.1  
+[21] vctrs_0.3.4     promises_1.1.1  fs_1.5.0        glue_1.4.2     
+[25] evaluate_0.14   rmarkdown_2.3   stringi_1.5.3   compiler_4.0.2 
+[29] pillar_1.4.6    httpuv_1.5.4    pkgconfig_2.0.3</code></pre>
 </div>
 </div>
 
